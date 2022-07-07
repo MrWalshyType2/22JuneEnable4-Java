@@ -68,6 +68,17 @@ public class Runner {
 		//   capitalised
 		// - method and variable names use camelCase, where every word after
 		//   the first is capitalised
+		
+		String name2 = "Albert";
+		String favouriteColor = "black";
+		System.out.println("Hello " + name2 + ", is your favourite colour " 
+							+ favouriteColor + "?");
+		
+		// substring
+		// - allows us to get a section of a string
+		name = "Fred Barry";
+		String surname = name.substring(5);
+		System.out.println(surname);
 	}
 
 }

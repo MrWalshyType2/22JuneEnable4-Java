@@ -1,8 +1,48 @@
 package com.qa.primitive_types;
 
+import java.io.FileReader;
+
 public class Runner {
 
 	public static void main(String[] args) {
+		{
+			// in the code block
+			// variables in a code block are scoped to that block
+			// i.e, the variable is only visible
+			int jdfsoia = 3;
+		} // this closes the most recently encountered {
+		// outside of the block
+//		System.out.println(jdfsoia); // not accessible
+		int s;
+		s = 25;
+		System.out.println(s);
+		
+		// delimiters can be used to separate programming instructions
+		// In Java:
+		// - a semi-colon is used to delimit programming statements or expressions
+		//
+		// Statements : Generally represent a complete instruction that does
+		//              not usually return some value
+		// Expressions: Generally represent some operation that will return a value,
+		//              they generally form part of a statement
+		int fds = s = 5 + 5;  
+		
+		// the var keyword
+		// - must be initialised with a value on the line the variable
+		//   is declared
+		var animal = "Donkey"; // type is inferred to be a String
+		var animalsAge = 7; // type is inferred to be a int
+		
+		animal = "Donkey";
+		// boolean, integer, char, double, float, long, short, byte			
+		// static typing:
+		// - we must specify the data type
+		// - the variable can only store data of that type
+
+		// dynamic typing:
+		// - can be any type, doesn't need to be specified
+		// - can also change the value to a value of a different type
+		
 		// Variable:
 		// - Stores a value
 		// - Value can change over time

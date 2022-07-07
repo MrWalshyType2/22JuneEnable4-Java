@@ -2,6 +2,10 @@ package com.qa.user_defined_classes.model;
 
 public class Car {
 	
+	// Encapsulation:
+	// - bundling the data (fields) and behaviours (methods) together, i.e., in a class
+	// - restricting access to the data
+	
 	// the state/data that belongs to an object created from a class
 	// is declared at the class-level
 	// - this state is referred to as the fields of a class in Java

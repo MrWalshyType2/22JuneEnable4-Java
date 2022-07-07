@@ -19,7 +19,7 @@ public class Runner {
 		
 		// we can also change the value of an instance variable
 		car.setManufacturer("Mazda");
-		car.numOfSeats = 2;
+		car.numOfSeats = 200;
 		car.engineSize = 355f;
 		
 		System.out.println(car.getManufacturer()); // "Mazda"
@@ -29,6 +29,10 @@ public class Runner {
 //		Car.displayInfo(); // illegal
 		car.displayInfo(); // legal
 		otherCar.displayInfo();
+		
+		Car myCar = new Car();
+		myCar.setManufacturer("324342");
+		myCar.displayInfo();
 	}
 
 }

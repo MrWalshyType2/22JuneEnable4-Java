@@ -52,7 +52,7 @@ class CalculatorTest {
 	@ParameterizedTest
 	@CsvSource({
 		"0,10,0",
-		"5543243252,4324.34243,1281869.6349169556", // imprecision due to floating-point arithmetic
+		"5543243252,4324.34243,1281869.6349169556",
 		"8324.23422773,0.0103,808178.0803621359"
 	})
 	void testDivide(double num1, double num2, double expected) {

@@ -10,6 +10,18 @@ public class Results {
 	public int percentage;
 	
 	public void displayResults() {
+		totalScore = physicsScore + chemistryScore + biologyScore;
+		String header = "###############\r\n"
+				+ "# EXAM SCORES #\r\n"
+				+ "###############";
+		System.out.println(header);
+		
+		System.out.println("PHYSICS: " + physicsScore);
+		System.out.println("CHEMISTRY: " + chemistryScore);
+		System.out.println("BIOLOGY: " + biologyScore);
+		System.out.println();
+		System.out.println("TOTAL SCORE: " + totalScore + "/450");
+		displayPercentage();
 	}
 	
 	/**
@@ -18,5 +30,8 @@ public class Results {
 	 * @return
 	 */
 	public void displayPercentage() {
+		totalScore = physicsScore + chemistryScore + biologyScore;
+		percentage = totalScore * 100 / 450;
+		System.out.println("PERCENTAGE: " + percentage + "%");
 	}
 }

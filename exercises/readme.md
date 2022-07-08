@@ -182,6 +182,85 @@ play(3, 3, 3) -> 0
 play(1, 1, 2) -> 2
 ```
 
+### Iteration
+
+#### Shapes
+
+For the following questions, you must use one or more iterative statements under the following constraint:
+
+> Only `System.out.print('\n')`, `System.out.print('#')` and `System.out.print(' ')` may be used to output to the console.
+
+1. Print a right-angled triangle to the console, the desired output is as follows:
+
+```
+#
+##
+###
+####
+#####
+```
+
+3. Print an inverted right-angled triangle to the console, the desired output is as follows:
+
+```
+#####
+####
+###
+##
+#
+```
+
+2. Print a left-angled triangle to the console, the desired output is as follows:
+
+```
+    #
+   ##
+  ###
+ ####
+#####
+```
+
+4. Print an inverted left-angled triangle to the console, the desired output is as follows:
+
+```
+#####
+ ####
+  ###
+   ##
+    #
+```
+
+5. Print an acute triangle to the console, the desired output is as follows:
+
+```
+   #
+  ###
+ #####
+#######
+```
+
+6. Print the following zig-zagged line to the console:
+
+```
+#
+ #
+# 
+ #
+#
+ #
+```
+
+7. Print a circle to the console, the desired output is as follows:
+
+```
+ ##
+#  #
+#  #
+ ##
+```
+
+
+
 ## Intermediate
 
 ## Advanced

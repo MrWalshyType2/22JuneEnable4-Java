@@ -1,9 +1,7 @@
 package exercises.beginner.operators;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 
 import org.junit.jupiter.api.AfterEach;
@@ -12,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import exercises.beginner.operators.Results;
 import exercises.utility.StandardOutputReader;
 
 class ResultsTest {

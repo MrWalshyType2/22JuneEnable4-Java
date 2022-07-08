@@ -3,7 +3,7 @@ package exercises.beginner.iteration;
 public class Shapes {
 
 	void printRightAngledTriangle() {
-
+		
 	}
 
 	void printInvertedRightAngledTriangle() {

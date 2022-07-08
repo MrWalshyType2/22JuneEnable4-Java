@@ -190,6 +190,8 @@ For the following questions, you must use one or more iterative statements under
 
 > Only `System.out.print('\n')`, `System.out.print('#')` and `System.out.print(' ')` may be used to output to the console.
 
+Using `exercises.beginner.iteration.Shapes`, do the following tasks:
+
 1. Print a right-angled triangle to the console, the desired output is as follows:
 
 ```
@@ -259,6 +261,43 @@ For the following questions, you must use one or more iterative statements under
  ##
 ```
 
+### Repeat the number
+
+For the following questions, you must use one or more iterative statements under the following constraint:
+
+> Only `System.out.print('\n')` and `System.out.print(i)`, where `i` is the number to print, may be used to output data to the console.
+
+Using `exercises.beginner.iteration.RepeatTheNumber`, do the following tasks:
+
+1) Create a method that will print out the numbers 1 through 10, 10 times each on the same line. Desired output is as follows:
+
+```
+1111111111
+2222222222
+3333333333
+4444444444
+5555555555
+6666666666
+7777777777
+8888888888
+9999999999
+10101010101010101010
+```
+
+2) Create a method that will print the numbers 1 through 10 as many times as the value of that number. Desired output is as follows:
+
+```
+1
+22
+333
+4444
+55555
+666666
+7777777
+88888888
+999999999
+10101010101010101010
+```
 
 
 ## Intermediate

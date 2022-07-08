@@ -113,11 +113,74 @@ but in this case the student would fail because their physics grade is 54% (Fail
 
 3. Expand the above so that the message that is displayed varies depending on the number of subjects that they have failed.
 
+For `displayResults()`, the output to the console must contain the following fragments, they may be in any order:
+
+**Header**
+
+```
+###############
+# EXAM SCORES #
+###############
+```
+
+**Body**
+
+```
+PHYSICS: 104/150
+CHEMISTRY: 134/150
+BIOLOGY: 97/150
+```
+
+**Footer**
+
+```
+TOTAL SCORE: 335/450
+PERCENTAGE: 74%
+```
+
+**Failure message examples**:
+
+When a failure occurs, it must be printed to the console. The possible fragments are as follows:
+
+- `FAILED CHEMISTRY: 20%`
+
+- `FAILED PHYSICS: 14%`
+
+- `FAILED BIOLOGY: 39%`
+
+- `FAILED: 41%`
+
+Scores and percentages will differ dependent on the values used for chemistry, physics and biology scores.
+
 #### Taxes
+
+Using `exercises.beginner.conditionals.Taxes`, do the following tasks:
+
+1. `calculateTaxRate` - which takes a salary and works out the percentage by which the salary will be taxed.
+
+2. `calculateTax` - which works out the exact amount that the user will be taxed using a similar process to that in the first method. That amount should be returned and output to the console.
+
+The salaries are taxed as below:
+
+```
+0 - 14,999 : 0% tax
+15,000 - 19,999 : 10% tax
+20,000 - 29,999 : 15% tax
+30,000 - 44,999 : 20% tax
+45,000+ : 25% tax
+```
 
 #### UniqueSum
 
+Using `exercises.beginner.conditionals.UniqueSum`, do the following tasks:
 
+Given 3 integer values, return their sum. If one value is the same as another value, they do not count towards the sum. In other words, only return the sum of unique numbers given.
+
+```
+play(1, 2, 3) -> 6
+play(3, 3, 3) -> 0
+play(1, 1, 2) -> 2
+```
 
 ## Intermediate
 

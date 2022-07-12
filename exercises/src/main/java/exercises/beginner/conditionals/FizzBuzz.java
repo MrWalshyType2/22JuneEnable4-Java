@@ -7,6 +7,20 @@ public class FizzBuzz {
 	// returns 'FizzBuzz' for multiples of both 3 and 5
 	// returns input number for numbers that are neither
 	public String play(int input) {
-		return null;
+	
+		String result;
+		
+		if (input % 3 ==0 && input % 5 == 0) {
+			return "FizzBuzz";
+		}
+		else if (input % 3 == 0) {
+			return "Fizz";
+		}
+		else if (input % 5 == 0) {
+			return "Buzz";
+		}
+		
+		
+		return String.valueOf(input);
 	}
 }

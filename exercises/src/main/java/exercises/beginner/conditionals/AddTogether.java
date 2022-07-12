@@ -21,6 +21,16 @@ public class AddTogether {
 	 * @return
 	 */
 	public int play(int n1) {
-		return 0;
+		
+		int result;
+		if (String.valueOf(n1).length() != 2) result = 0; 
+		else {
+			int lastDigit = n1 % 10;
+			int slimmedOnce = n1 / 10;
+			int secondLast = slimmedOnce % 10;
+			
+			result = lastDigit + secondLast;
+		}
+		return result;
 	}
 }

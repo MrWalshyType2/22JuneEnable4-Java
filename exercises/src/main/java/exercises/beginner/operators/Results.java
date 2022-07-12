@@ -22,6 +22,7 @@ public class Results {
 		System.out.println();
 		System.out.println("TOTAL SCORE: " + totalScore + "/450");
 		displayPercentage();
+
 	}
 	
 	/**

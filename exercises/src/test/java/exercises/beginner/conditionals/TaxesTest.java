@@ -1,3 +1,4 @@
+
 package exercises.beginner.conditionals;
 
 import static org.junit.jupiter.api.Assertions.*;

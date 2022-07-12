@@ -10,6 +10,10 @@ public class Calculator {
 	 * @return the sum 
 	 */
 	public double add(double num1, double num2) {
+<<<<<<< Updated upstream
+=======
+		// TODO: Addition of two numbers
+>>>>>>> Stashed changes
 		return num1 + num2;
 	}
 	

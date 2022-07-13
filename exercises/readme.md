@@ -4,7 +4,9 @@
 
 - [Beginner exercises](#beginner)
 
-	- [Operators](#operators)
+    - [Operators](#operators)
+	
+- [Iteration](#iteration)
 
 ## Beginner
 

@@ -28,4 +28,23 @@ public class TodoList {
 		todoItems.add(todo);
 		return true;
 	}
+	
+	public boolean deleteById(long id) {
+		boolean didDelete = false;
+		
+		for (int i = 0; i < todoItems.size(); i++) {
+			Todo current = todoItems.get(i);
+			
+			if (current.getId() == id) {
+				didDelete = todoItems.remove(current);
+				break;
+			}
+		}
+		
+		return didDelete;
+	}
+
+	public ArrayList<Todo> read() {
+		return todoItems;
+	}
 }

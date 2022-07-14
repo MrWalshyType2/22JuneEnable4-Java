@@ -11,8 +11,9 @@ public class Menu implements Action {
 	protected boolean isRunning;
 	
 	public Menu(String name) {
-		this.name = name;
-		isRunning = false;
+//		this.name = name;
+//		isRunning = false;
+		this(name, List.of());
 	}
 	
 	public Menu(String name, List<MenuItem> menuItems) {

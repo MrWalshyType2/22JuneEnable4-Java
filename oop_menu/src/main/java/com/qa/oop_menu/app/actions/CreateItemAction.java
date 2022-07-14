@@ -28,10 +28,10 @@ public class CreateItemAction implements UndoableAction {
 	}
 
 	@Override
-	public boolean undo() {
+	public void undo() {
 		if (created == null) {
 			throw new NullPointerException("Nothing to undo");
 		}
-		return itemController.delete(created.getId());
+		itemController.delete(created.getId());
 	}
 }

@@ -15,10 +15,15 @@ public class UndoActionManager {
 		actions.push(action);
 	}
 
-	public void undoLastAction() {
-		UndoableAction action = actions.pop();
-		
-		if (!action.undo()) actions.push(action);
+	public boolean undoLastAction() {
+		if (actions.size() > 0) {
+			UndoableAction action = actions.pop();
+			action.undo();
+			return true;
+		} else {
+			System.out.println("No actions to undo.");
+			return false;
+		}
 	}
 
 }

@@ -12,7 +12,7 @@ public class ItemManagementSystem {
 		ItemController itemController = new ItemController();
 		Menu mainMenu = new Menu("=== MAIN MENU ===", List.of(
 				new MenuItem("Access the item inventory", "1", new ItemMenu("Item inventory", itemController)),
-				new MenuItem("Exit the application", "2", new ExitAction())
+				new MenuItem("Exit the application", "E", new ExitAction())
 		));
 		mainMenu.execute();
 	}

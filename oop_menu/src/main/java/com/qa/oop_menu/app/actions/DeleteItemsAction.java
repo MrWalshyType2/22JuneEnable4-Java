@@ -19,10 +19,9 @@ public class DeleteItemsAction implements UndoableAction {
 	}
 
 	@Override
-	public boolean undo() {
+	public void undo() {
 		System.out.println("Recreating deleted item...");
 		itemController.create(deleted);
-		return true;
 	}
 
 }

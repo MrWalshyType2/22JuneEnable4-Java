@@ -36,9 +36,5 @@ public class MenuItem implements Action {
 	public Action getAction() {
 		return action;
 	}
-
-	public void setAction(Action action) {
-		this.action = action;
-	}
 	
 }

@@ -1,13 +1,17 @@
 package com.qa.oop_menu.app.actions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.qa.oop_menu.InputUtilities;
 import com.qa.oop_menu.app.controller.ItemController;
 import com.qa.oop_menu.app.domain.Item;
-import com.qa.oop_menu.menu.Action;
+import com.qa.oop_menu.menu.UndoableAction;
 
-public class CreateItemAction implements Action {
+public class CreateItemAction implements UndoableAction {
 
-	protected ItemController itemController;
+	private ItemController itemController;
+	private Item created;
 
 	public CreateItemAction(ItemController itemController) {
 		super();
@@ -20,7 +24,14 @@ public class CreateItemAction implements Action {
 		String description = InputUtilities.getString("DESCRIPTION: ");
 		int quantity = InputUtilities.getInt("QUANTITY: ");
 		InputUtilities.getString(""); // consume the rest of the line otherwise it causes bugs when nextLine() is next called
-		itemController.create(new Item(name, description, quantity));
+		created = itemController.create(new Item(name, description, quantity));
 	}
 
+	@Override
+	public boolean undo() {
+		if (created == null) {
+			throw new NullPointerException("Nothing to undo");
+		}
+		return itemController.delete(created.getId());
+	}
 }

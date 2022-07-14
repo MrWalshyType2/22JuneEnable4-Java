@@ -8,7 +8,7 @@ import com.qa.oop_menu.menu.Action;
 
 public class ReadItemsAction implements Action {
 
-	protected ItemController itemController;
+	private ItemController itemController;
 
 	public ReadItemsAction(ItemController itemController) {
 		super();

@@ -1,6 +1,7 @@
 package com.qa.inheritance_and_polymorphism;
 
 import com.qa.inheritance_and_polymorphism.animals.Animal;
+import com.qa.inheritance_and_polymorphism.animals.Cat;
 import com.qa.inheritance_and_polymorphism.animals.Dog;
 import com.qa.inheritance_and_polymorphism.classifications.Vertebrate;
 
@@ -15,8 +16,12 @@ public class Runner {
 //		Vertebrate vertabrate = new Vertebrate();
 //		System.out.println(vertabrate.getClassification());
 		
-		Dog dog = new Dog();
-		System.out.println(dog.getSpecies());
+		Dog dog = new Dog("Berty");
+		Dog another = new Dog("Berty");
+//		System.out.println(dog.getSpecies());
+		
+		System.out.println(dog.toString());
+		System.out.println(dog.equals(another));
 		
 		Dog miniaturePinscher = new Dog("Miniature Pinscher");
 		System.out.println(miniaturePinscher.getSpecies());
@@ -70,10 +75,15 @@ public class Runner {
 		System.out.println(frenchy.equals(dog)); // false
 		
 		Animal dog1 = new Dog("Bulldog");
-		Dog dog2 = new Dog("Bulldog");
+		((Dog) dog1).woof();
+		Vertebrate dog2 = new Dog("Bulldog");
 		System.out.println(dog1.equals(dog2)); // true
 		
-		Animal someRandomDog = dog2;
+//		Animal someRandomDog = new Animal("");
+//		someRandomDog.makeNoise();
+		
+		Animal a = new Dog("Fred");
+		a.makeNoise();
 	}
 
 }

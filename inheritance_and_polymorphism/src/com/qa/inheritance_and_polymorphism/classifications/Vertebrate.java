@@ -33,4 +33,5 @@ public abstract class Vertebrate extends Animal {
 		}
 		this.species = species;
 	}
+
 }

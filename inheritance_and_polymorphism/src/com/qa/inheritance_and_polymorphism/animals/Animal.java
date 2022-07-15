@@ -2,12 +2,19 @@ package com.qa.inheritance_and_polymorphism.animals;
 
 import java.util.Objects;
 
-public class Animal {
-
+// adding the abstract keyword to a class declaration
+// makes the class abstract
+// - it means we cannot create an instance of the class anymore
+public abstract class Animal {
+	
+	// abstract classes can function almost exactly like a class,
+	// they can have fields and methods, whether they are abstract or
+	// not.
+  
 	protected int age;
 	protected String classification;
 	protected String species;
-	protected String sex;
+	protected String sex;   
 	
 	public Animal(String classification) {
 		super();
@@ -19,6 +26,12 @@ public class Animal {
 		this.classification = classification;
 		this.species = "Unknown";
 	}
+	
+	// abstract methods do not have a body, they must be implemented
+	// by the first concrete class which inherits from this class in this case
+	// - a concrete class just a class that is not abstract
+	// - abstract methods MUST BE in an abstract class
+	public abstract void makeNoise();
 	
 	public int getAge() {
 		return age;
@@ -67,7 +80,7 @@ public class Animal {
 	// - to override a method, it is not necessary to specify @Override
 	@Override
 	public boolean equals(Object obj) {	
-		System.out.println("the overridden equals which can be applied to any object:");
+		System.out.println("the overridden equals in Animal which can be applied to any object:");
 		if (this == obj)
 			return true;
 		if (obj == null)

@@ -5,7 +5,7 @@ import com.qa.inheritance_and_polymorphism.animals.Animal;
 // to inherit from another class, we use the extends keyword
 // followed by the name of the class
 // - we can only inherit from one class
-public class Vertebrate extends Animal {
+public abstract class Vertebrate extends Animal {
 
 	// If we inherit from a class that does not have a zero-argument
 	// constructor, we must provide a constructor that calls the one

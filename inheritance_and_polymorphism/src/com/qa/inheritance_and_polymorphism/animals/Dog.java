@@ -1,5 +1,7 @@
 package com.qa.inheritance_and_polymorphism.animals;
 
+import java.util.Objects;
+
 import com.qa.inheritance_and_polymorphism.classifications.Vertebrate;
 
 public class Dog extends Vertebrate {
@@ -9,15 +11,15 @@ public class Dog extends Vertebrate {
 	// - When Java inserts a default constructor, it adds super() to the first line of it
 	
 	public Dog() {
-		this.species = "Unknown";
+		super();
 	}
 	
 	public Dog(String species) {
-		if (species == null) {
-			throw new NullPointerException("Classification cannot be null.");
-		} else if (species.isBlank()) {
-			throw new IllegalArgumentException("The provided classification cannot be empty.");
-		}
-		this.species = species;
+		super(species);
 	}
+	
+	public void woof() {
+		System.out.println("woof woof");
+	}
+	
 }

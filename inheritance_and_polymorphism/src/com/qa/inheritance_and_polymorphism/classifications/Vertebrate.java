@@ -14,7 +14,6 @@ public class Vertebrate extends Animal {
 	// One instance where we don't have a zero-arg constructor:
 	// - If we provide a constructor in the superclass that takes at least 1 arg
 	//   and don't also provide a zero-arg constructor
-	
 	public Vertebrate() {
 		// To solve the issue of there being no empty constructor
 		// in the parent class, we must call the constructor
@@ -23,5 +22,15 @@ public class Vertebrate extends Animal {
 		// To call the parent classes constructor, we must use
 		// the super keyword
 		super("Verterbrate");
+	}
+	
+	public Vertebrate(String species) {
+		super("Verterbrate");
+		if (species == null) {
+			throw new NullPointerException("Classification cannot be null.");
+		} else if (species.isBlank()) {
+			throw new IllegalArgumentException("The provided classification cannot be empty.");
+		}
+		this.species = species;
 	}
 }

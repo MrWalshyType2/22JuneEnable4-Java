@@ -20,6 +20,10 @@ This repository explores at least one pattern from each category of design patte
 
 #### Factory method pattern
 
+The factory method pattern is used for the creation of objects, this pattern works by providing an interface for creating objects of a superclass, subclasses may alter the type of object created.
+
+> TLDR: We are replacing `new SomeClass()` calls with a *factory method*, i.e., `SomeClassFactory.of()`. The `of` factory method would then be responsible for calling `new SomeClass()` based on inputs we pass to it.
+
 ### Structural
 
 #### Adapter

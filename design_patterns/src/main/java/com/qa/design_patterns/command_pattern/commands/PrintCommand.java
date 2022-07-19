@@ -16,6 +16,5 @@ public class PrintCommand implements MenuCommand {
 	public void execute() {
 		System.out.println(value);
 	}
-
 	
 }

@@ -17,6 +17,7 @@ public class Player {
 	}
 
 	public void attack(Player player) {
+		System.out.println(name + " is attacking " + player.getName());
 		attackStrategy.attack(player);
 	}
 
@@ -54,8 +55,7 @@ public class Player {
 
 	@Override
 	public String toString() {
-		return "Player [name=" + name + ", health=" + health + ", strength=" + strength + ", attackStrategy="
-				+ attackStrategy + "]";
+		return "Player [name=" + name + ", health=" + health + ", strength=" + strength + "]";
 	}
 
 }

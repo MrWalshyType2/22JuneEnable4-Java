@@ -1,13 +1,10 @@
-package com.qa.design_patterns.factory_method_pattern.strategies;
+package com.qa.design_patterns.factory_method_pattern.strategies.simple;
 
 import com.qa.design_patterns.factory_method_pattern.Player;
+import com.qa.design_patterns.factory_method_pattern.strategies.AttackStrategy;
 
 public class Kick implements AttackStrategy {
 	
-	protected Kick() {
-		
-	}
-
 	@Override
 	public void attack(Player player) {
 		int damage = 40 - player.getStrength();

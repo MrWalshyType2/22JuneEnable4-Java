@@ -4,7 +4,7 @@ import java.util.Objects;
 
 import com.qa.garage_exercise.vehicle.parts.Engine;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Moveable, NoiseProducer {
 
 	// fields
 	private long id;
@@ -23,8 +23,6 @@ public abstract class Vehicle {
 	}
 
 	// methods
-	public abstract void move(String direction);
-	public abstract void noise(float decibels);
 	public abstract void light(String light);
 	
 	public long getId() {

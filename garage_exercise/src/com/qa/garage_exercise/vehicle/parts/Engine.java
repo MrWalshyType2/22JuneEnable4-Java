@@ -9,7 +9,7 @@ public class Engine {
 	public Engine(String engineType) {
 		this.engineType = engineType;
 	}
-	
+		
 	public String getEngineType() {
 		return engineType;
 	}

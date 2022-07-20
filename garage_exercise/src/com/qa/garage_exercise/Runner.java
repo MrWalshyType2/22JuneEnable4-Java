@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.qa.garage_exercise.vehicle.Car;
 import com.qa.garage_exercise.vehicle.Motorbike;
+import com.qa.garage_exercise.vehicle.Moveable;
 import com.qa.garage_exercise.vehicle.Vehicle;
 import com.qa.garage_exercise.vehicle.parts.Engine;
 
@@ -31,6 +32,12 @@ public class Runner {
 		for (var bill : bills) {
 			System.out.println(bill);
 		}
+		
+		parkVehicle(mazda);
+		parkVehicle(bmw);
 	}
 
+	public static void parkVehicle(Moveable moveable) {
+		moveable.move("to parking lot");
+	}
 }

@@ -7,23 +7,23 @@ import com.qa.garage_exercise.vehicle.Car;
 import com.qa.garage_exercise.vehicle.Motorbike;
 import com.qa.garage_exercise.vehicle.Vehicle;
 
-public class Garage {
-
+public abstract class Garage<T extends Vehicle> {
+	
 	public static long idCounter = 1;
-	private List<Vehicle> vehicles;
-	private int baseRepairCost; // pounds
+	private List<T> vehicles;
+	protected int baseRepairCost; // pounds
 
 	public Garage() {
 		this.vehicles = new ArrayList<>();
 		this.baseRepairCost = 50;
 	}
 
-	public Garage(List<Vehicle> vehicles, int baseRepairCost) {
+	public Garage(List<T> vehicles, int baseRepairCost) {
 		this.vehicles = vehicles;
 		this.baseRepairCost = baseRepairCost;
 	}
 
-	public void add(Vehicle vehicle) {
+	public void add(T vehicle) {
 		// make sure the vehicle doesn't already exist
 		// - iterate over to do so
 		for (var vehicleInGarage : vehicles) {
@@ -64,7 +64,7 @@ public class Garage {
 		return getBill(id);
 	}
 
-	public Vehicle remove(long id) {
+	public T remove(long id) {
 		// What kind of problem is this?
 		// - search problem (finding the element with the given id)
 		for (int i = 0; i < vehicles.size(); i++) {
@@ -76,7 +76,7 @@ public class Garage {
 		throw new RuntimeException("Vehicle with the given ID does not exist: " + id);
 	}
 
-	public Vehicle remove(Vehicle vehicle) {
+	public T remove(T vehicle) {
 		// What kind of problem is this?
 		// - search problem (finding the element with the given type)
 		for (int i = 0; i < vehicles.size(); i++) {
@@ -88,14 +88,14 @@ public class Garage {
 		throw new RuntimeException("Vehicle does not exist: " + vehicle.toString());
 	}
 
-	public List<Vehicle> empty() {
+	public List<T> empty() {
 		var oldVehicles = vehicles;
 		vehicles = new ArrayList<>();
 		return oldVehicles;
 	}
 
-	public List<Vehicle> empty(String type) {
-		List<Vehicle> vehiclesToRemove = new ArrayList<>();
+	public List<T> empty(String type) {
+		List<T> vehiclesToRemove = new ArrayList<>();
 		
 		for (var vehicle : vehicles) {
 			if (vehicle.getType().equals(type)) {
@@ -112,13 +112,5 @@ public class Garage {
 		return "Garage [vehicles=" + vehicles + "]";
 	}
 	
-	private int calculateCost(Vehicle vehicle) {
-		if (vehicle instanceof Car) {
-			return 3 * baseRepairCost;
-		} else if (vehicle instanceof Motorbike) {
-			return 2 * baseRepairCost;
-		} else {
-			return 5 * baseRepairCost;
-		}
-	}
+	protected abstract int calculateCost(T vehicle);
 }

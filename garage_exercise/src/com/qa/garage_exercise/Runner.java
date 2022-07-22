@@ -14,27 +14,37 @@ public class Runner {
 		Engine electricEngine = new Engine("ELECTRIC");
 		Engine combustionEngine = new Engine("COMBUSTION");
 		
-		Vehicle mazda = new Car("Mazda", "RX-7", combustionEngine);
-		Vehicle bmw = new Motorbike("BMW", "r500", combustionEngine);
+		Car mazda = new Car("Mazda", "RX-7", combustionEngine);
+		Motorbike bmw = new Motorbike("BMW", "r500", combustionEngine);
 //		System.out.println(mazda);
 		
-		Garage garage = new Garage();
-		garage.add(mazda);
+		Garage<Motorbike> garage = new BikeGarage();
+//		garage.add(mazda);
 		garage.add(bmw);
+		
+		Garage<Car> carGarage = new CarGarage();
+		carGarage.add(mazda);
+//		carGarage.add(bmw);
 //		Vehicle v = garage.remove(1);
 		
 //		var carsRemoved = garage.empty("CAR");
 //		System.out.println(carsRemoved);
 //		System.out.println(garage);
 		
-		List<String> bills = garage.getBills();
+		List<String> bills = carGarage.getBills();
 		
 		for (var bill : bills) {
 			System.out.println(bill);
 		}
 		
-		parkVehicle(mazda);
-		parkVehicle(bmw);
+		bills = garage.getBills();
+		
+		for (var bill : bills) {
+			System.out.println(bill);
+		}
+		
+//		parkVehicle(mazda);
+//		parkVehicle(bmw);
 	}
 
 	public static void parkVehicle(Moveable moveable) {

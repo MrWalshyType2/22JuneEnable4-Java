@@ -4,14 +4,15 @@ import java.time.LocalDate;
 import java.util.List;
 
 import com.qa.todolist_layered_architecture.domain.entity.Todo;
+import com.qa.todolist_layered_architecture.domain.repository.Repository;
 import com.qa.todolist_layered_architecture.domain.repository.TodoRepository;
 import com.qa.todolist_layered_architecture.utilities.InputUtilities;
 
 public class TodoController {
 
-	private TodoRepository todoRepository;
+	private Repository<Todo, Long> todoRepository;
 	
-	public TodoController(TodoRepository todoRepository) {
+	public TodoController(Repository<Todo, Long> todoRepository) {
 		this.todoRepository = todoRepository;
 	}
 	

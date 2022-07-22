@@ -16,6 +16,13 @@ public class Todo {
 		this.name = name;
 		this.dueDate = dueDate;
 	}
+	
+	public Todo(long id, String name, LocalDate dueDate) {
+		super();
+		this.name = name;
+		this.dueDate = dueDate;
+		this.id = id;
+	}
 
 	public long getId() {
 		return id;

@@ -36,6 +36,7 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- Used to help with mocking static classes or methods -->
 		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-inline -->
 		<dependency>
 			<groupId>org.mockito</groupId>

@@ -16,30 +16,32 @@ public class TodoController {
 		this.todoRepository = todoRepository;
 	}
 	
-	public void create() {
+	public Todo create() {
 		String name = InputUtilities.getString("Name: ");
 		String date = InputUtilities.getString("Date (yyyy/mm/dd): ");
 		
 		Todo todo = todoRepository.save(new Todo(name, LocalDate.parse(date)));
 		System.out.println("Todo created successfully!\n\t" + todo.toString() + "\n");
+		return todo;
 	}
 	
-	public void read() {
+	public List<Todo> read() {
 		List<Todo> todos = todoRepository.read();
 		for (Todo todo : todos) {
 			System.out.println(todo.toString());
 		}
+		return todos;
 	}
 	
-	public void update() {
-		
+	public Todo update() {
+		return null;
 	}
 	
-	public void deleteById() {
-		
+	public boolean deleteById() {
+		return false;
 	}
 	
-	public void deleteByName() {
-		
+	public boolean deleteByName() {
+		return false;
 	}
 }
